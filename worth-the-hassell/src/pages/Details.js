@@ -4,6 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import useWindowSize from '../hooks/useWindowSize';
+import Typography from '@mui/material/Typography';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -57,19 +58,30 @@ export function DetailsTabs() {
             onChange={handleChange} 
             aria-label="basic tabs example"
         >
-          <Tab label="Item One" {...a11yProps(0)} sx={{borderRight: isSmallScreen ? 0 : 1, borderColor: 'divider'}}/>    
-          <Tab label="Item Two" {...a11yProps(1)}  sx={{borderRight: isSmallScreen ? 0 : 1, borderColor: 'divider'}}/>
-          <Tab label="Item Three" {...a11yProps(2)}  sx={{borderRight: isSmallScreen ? 0 : 1, borderColor: 'divider'}}/>
+          <Tab label="The boring part" {...a11yProps(0)} sx={{borderRight: isSmallScreen ? 0 : 1, borderColor: 'divider'}}/>    
+          <Tab label="Dinner" {...a11yProps(1)}  sx={{borderRight: isSmallScreen ? 0 : 1, borderColor: 'divider'}}/>
+          <Tab label="The Party" {...a11yProps(2)}  sx={{borderRight: isSmallScreen ? 0 : 1, borderColor: 'divider'}}/>
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        Item One
+        <h1>Paperwork</h1>
+        <p>
+            We will be legally married at an unspecificed location on an unspecificed date with as few parties involved as legally possible.
+        </p>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+        
+        <h1>Reception</h1>
+        <p>
+            Cocktail hour at 5:00, followed by a family style dinner at 6:00 at <a href="https://www.google.com/maps/place/Harry's+Fine+Foods/@47.6244569,-122.3268166,17z/data=!3m1!4b1!4m6!3m5!1s0x549015302f986edf:0xe4dfbc9620806d20!8m2!3d47.6244569!4d-122.3268166!16s%2Fg%2F11c0xqb4k3!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D">Harry's Fine Foods</a> on Capitol Hill.
+        </p>
+        
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Item Three
+        <h1>Let'er Rip</h1>
+        <p>
+            Karaoke at <a href="https://www.google.com/maps/place/The+Lookout/@47.6266208,-122.32738,17.62z/data=!4m6!3m5!1s0x549015255fa1941b:0xef754b5604cb6dfd!8m2!3d47.6267332!4d-122.3267662!16s%2Fg%2F1hc7gvxgb!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D">The Lookout</a> starting at 8:00 until ¿ with hosted bar and a candy station.
+        </p>
       </CustomTabPanel>
     </Box>
   );
