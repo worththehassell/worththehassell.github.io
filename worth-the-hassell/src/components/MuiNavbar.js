@@ -27,6 +27,10 @@ const navItems = [
     {
         "page": "Contact",
         "location": "/contact"
+    },
+    {
+        "page": "The Facts",
+        "location": "/details"
     }
 ];
 const title = "#WorthTheHassell";
