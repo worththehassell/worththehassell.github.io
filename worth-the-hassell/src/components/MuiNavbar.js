@@ -15,7 +15,21 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = [
+    {
+        "page": 'Home',
+        "location": "/"
+    }, 
+    {
+        "page": "About",
+        "location": "/about"
+    },
+    {
+        "page": "Contact",
+        "location": "/contact"
+    }
+];
+const title = "#WorthTheHassell";
 
 function DrawerAppBar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -27,14 +41,14 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        {title}
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+          <ListItem key={item.page} disablePadding>
+            <ListItemButton href={item.location} sx={{ textAlign: 'center' }}>
+              <ListItemText primary={item.page} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -61,12 +75,12 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            {title}
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+              <Button href={item.location} key={item.page} sx={{ color: '#fff' }}>
+                {item.page}
               </Button>
             ))}
           </Box>
