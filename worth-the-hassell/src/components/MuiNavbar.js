@@ -18,19 +18,19 @@ const drawerWidth = 240;
 const navItems = [
     {
         "page": 'Home',
-        "location": "/"
+        "location": "#/"
     }, 
     {
         "page": "About",
-        "location": "/about"
+        "location": "#/about"
     },
     {
         "page": "RSVP",
-        "location": "/rsvp"
+        "location": "#/rsvp"
     },
     {
         "page": "The Facts",
-        "location": "/details"
+        "location": "#/details"
     }
 ];
 const title = "#WorthTheHassell";
