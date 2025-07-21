@@ -123,7 +123,7 @@ export default function RSVPForm() {
         });
       };
 
-    const nameIsValid = names[0].value != "";
+    const nameIsValid = names[0].value !== "";
 
   return (
     <Box
