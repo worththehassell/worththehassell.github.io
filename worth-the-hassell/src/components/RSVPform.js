@@ -13,14 +13,15 @@ submissionTimestamp: 1753049825522
 */
 
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
 import { Grid, TextField, IconButton, Checkbox, FormGroup, FormControlLabel } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
-function DynamicNames() {
-  const [names, setNames] = useState([{ id: 1, value: '' }]);
+function DynamicNames(props) {
+    const { setNames, names } = props;
 
   const addRow = () => {
     setNames([...names, { id: names.length + 1, value: '' }]);
@@ -66,21 +67,39 @@ function DynamicNames() {
             </Grid>
         ))}
         </div>
-        <div>
-            <h5>Events</h5>
-            <FormGroup>
-                <FormControlLabel control={<Checkbox />} label="Dinner" />
-                <FormControlLabel control={<Checkbox />} label="Karaoke" />
-            </FormGroup>
-        </div>
     </>
   );
 }
+
+DynamicNames.propTypes = {
+    children: PropTypes.node,
+    setNames: PropTypes.func.isRequired,
+    names: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number,
+        value: PropTypes.string
+    })).isRequired
+};
 
 
 
 
 export default function RSVPForm() {
+    const [names, setNames] = useState([{ id: 1, value: '' }]);
+
+    const [checkState, setCheckState] = React.useState({
+        dinner: false,
+        karaoke: false
+    });
+    
+    const handleChange = (event) => {
+        setCheckState({
+        ...checkState,
+        [event.target.name]: event.target.checked,
+        });
+    };
+
+    const { dinner, karaoke } = checkState;
+
   return (
     <Box
       component="form"
@@ -88,7 +107,17 @@ export default function RSVPForm() {
       noValidate
       autoComplete="off"
     >
-      <DynamicNames />
+      <DynamicNames 
+        setNames={setNames}
+        names={names}
+      />
+      <div>
+            <h5>Events</h5>
+            <FormGroup>
+                <FormControlLabel control={<Checkbox checked={dinner} onChange={handleChange} />} label="Dinner" name="dinner" />
+                <FormControlLabel control={<Checkbox checked={karaoke} onChange={handleChange} />} label="Karaoke" name="karaoke" />
+            </FormGroup>
+        </div>
     </Box>
   );
 }
