@@ -16,9 +16,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
-import { Grid, TextField, IconButton, Checkbox, FormGroup, FormControlLabel } from '@mui/material';
+import { Grid, TextField, IconButton, Checkbox,Button, FormGroup, FormControlLabel, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import SendIcon from '@mui/icons-material/Send';
 
 function DynamicNames(props) {
     const { setNames, names } = props;
@@ -81,9 +82,8 @@ DynamicNames.propTypes = {
 };
 
 
-
-
 export default function RSVPForm() {
+    const [submitted, setSubmitted] = useState(false);
     const [names, setNames] = useState([{ id: 1, value: '' }]);
 
     const [checkState, setCheckState] = React.useState({
@@ -99,6 +99,45 @@ export default function RSVPForm() {
     };
 
     const { dinner, karaoke } = checkState;
+
+    const handleSubmit = async (e) => {
+        setSubmitted(true);
+        e.preventDefault();
+
+        names.map(async (guest) => {
+            const data = {
+                "guest": guest.value,
+                "dinner": dinner,
+                "karaoke": karaoke
+            }
+
+            let url = "https://script.google.com/macros/s/AKfycbwoEYJ9f7sKiSAgoYu2OMdnIYcZp7ReDCbJJsQcD4Xv0kEiJflUavagJQAzAKdB3_Mw/exec";
+
+            try {
+                const response = await fetch(url, {
+                  method: 'POST',
+                  mode: 'no-cors',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(data)
+                });
+          
+                if (response.ok) {
+                  // Handle successful response
+                  console.log('Form submitted successfully!');
+                } else {
+                  // Handle errors
+                  console.error('Error submitting form:', response.status, response.statusText);
+                }
+              } catch (error) {
+                setSubmitted(false);
+                console.error('Network error:', error);
+              }
+        });
+      };
+
+    const nameIsValid = names[0].value != "";
 
   return (
     <Box
@@ -117,7 +156,17 @@ export default function RSVPForm() {
                 <FormControlLabel control={<Checkbox checked={dinner} onChange={handleChange} />} label="Dinner" name="dinner" />
                 <FormControlLabel control={<Checkbox checked={karaoke} onChange={handleChange} />} label="Karaoke" name="karaoke" />
             </FormGroup>
-        </div>
+      </div>
+      <div>
+      <Button 
+        variant="contained" 
+        disabled={submitted || !nameIsValid}
+        endIcon={<SendIcon />}
+        onClick={handleSubmit}>
+        Send RSVP
+      </Button>
+      <Typography display={submitted ? null : "none"}>Thanks you for sending your RSVP!</Typography>
+      </div>
     </Box>
   );
 }
