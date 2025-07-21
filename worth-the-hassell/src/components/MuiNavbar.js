@@ -25,8 +25,8 @@ const navItems = [
         "location": "/about"
     },
     {
-        "page": "Contact",
-        "location": "/contact"
+        "page": "RSVP",
+        "location": "/rsvp"
     },
     {
         "page": "The Facts",

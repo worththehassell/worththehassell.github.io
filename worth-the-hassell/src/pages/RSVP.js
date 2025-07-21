@@ -1,10 +1,10 @@
 import './App.css';
 import RSVPForm from '../components/RSVPform';
 
-function Contact() {
+function Rsvp() {
   return (
     <RSVPForm />
   );
 }
 
-export default Contact;
+export default Rsvp;

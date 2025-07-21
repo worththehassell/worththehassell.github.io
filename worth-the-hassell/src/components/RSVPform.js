@@ -1,17 +1,3 @@
-/*
-entry.1498135098: Nick
-entry.1143033184: Yes
-entry.721740963: Yes
-dlut: 1753049825397
-entry.1143033184_sentinel: 
-entry.721740963_sentinel: 
-fvv: 1
-partialResponse: [null,null,"-7792620244623700619"]
-pageHistory: 0
-fbzx: -7792620244623700619
-submissionTimestamp: 1753049825522
-*/
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';

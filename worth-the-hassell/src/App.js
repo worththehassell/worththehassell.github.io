@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home'
 import About from './pages/About';
-import Contact from './pages/Contact';
+import Rsvp from './pages/RSVP';
 import DetailsTabs from './pages/Details';
 import DrawerAppBar from './components/MuiNavbar';
 import { Container } from '@mui/system';
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/rsvp" element={<Rsvp />} />
           <Route path="details" element={<DetailsTabs />} />
         </Routes>
       </Router>
