@@ -19,10 +19,6 @@ const navItems = [
     {
         "page": 'Home',
         "location": "#/"
-    }, 
-    {
-        "page": "About",
-        "location": "#/about"
     },
     {
         "page": "RSVP",
