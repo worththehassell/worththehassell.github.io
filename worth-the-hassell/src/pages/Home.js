@@ -1,6 +1,5 @@
 import { Typography } from '@mui/material';
 import React from 'react';
-import FlyingImage from '../components/FlyingImage';
 import phone from '../static/phone.jpg';
 import phoneSmall from '../static/phoneSmall.jpeg';
 import phoneMedium from '../static/phoneMedium.jpeg';

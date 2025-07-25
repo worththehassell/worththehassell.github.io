@@ -71,6 +71,7 @@ DynamicNames.propTypes = {
 export default function RSVPForm() {
     const [submitted, setSubmitted] = useState(false);
     const [names, setNames] = useState([{ id: 1, value: '' }]);
+    const [songChoice, setSongChoice] = useState("");
 
     const [checkState, setCheckState] = React.useState({
         dinner: false,
@@ -84,6 +85,11 @@ export default function RSVPForm() {
         });
     };
 
+    const handleSongChange = (event) => {
+        const updatedSong = event.target.value
+        setSongChoice(updatedSong);
+      };
+
     const { dinner, karaoke } = checkState;
 
     const handleSubmit = async (e) => {
@@ -94,10 +100,11 @@ export default function RSVPForm() {
             const data = {
                 "guest": guest.value,
                 "dinner": dinner,
-                "karaoke": karaoke
+                "karaoke": karaoke,
+                "songChoice": songChoice,
             }
 
-            let url = "https://script.google.com/macros/s/AKfycbwoEYJ9f7sKiSAgoYu2OMdnIYcZp7ReDCbJJsQcD4Xv0kEiJflUavagJQAzAKdB3_Mw/exec";
+            let url = "https://script.google.com/macros/s/AKfycbx2RwjXbyAIS99Mu_-tqDVK8ql2fpx-N0t1DHkcNKGtKNqC6TPYsnh_dpnDzDzBxBTj/exec";
 
             try {
                 const response = await fetch(url, {
@@ -142,6 +149,12 @@ export default function RSVPForm() {
                 <FormControlLabel control={<Checkbox checked={dinner} onChange={handleChange} />} label="Dinner" name="dinner" />
                 <FormControlLabel control={<Checkbox checked={karaoke} onChange={handleChange} />} label="Karaoke" name="karaoke" />
             </FormGroup>
+            <TextField
+                label={`Favorite Karaoke Songs (comma separated)`}
+                value={songChoice}
+                onChange={(event) => handleSongChange(event)}
+                fullWidth
+                />
       </div>
       <div>
       <Button 

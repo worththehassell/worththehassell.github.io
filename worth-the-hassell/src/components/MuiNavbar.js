@@ -25,6 +25,10 @@ const navItems = [
         "location": "#/rsvp"
     },
     {
+        "page": "Photos",
+        "location": "#/photos"
+    },
+    {
         "page": "The Facts",
         "location": "#/details"
     }
