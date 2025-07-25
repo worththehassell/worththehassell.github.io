@@ -63,6 +63,8 @@ export function DetailsTabs() {
             className="tab-bar" 
             orientation={isSmallScreen ? 'horizontal' : 'vertical'} 
             value={value} 
+            variant="scrollable"
+            scrollButtons="auto"
             onChange={handleChange} 
             aria-label="basic tabs example"
         >
