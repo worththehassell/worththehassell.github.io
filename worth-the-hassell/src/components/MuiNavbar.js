@@ -21,16 +21,16 @@ const navItems = [
         "location": "#/"
     },
     {
+        "page": "The Facts",
+        "location": "#/details"
+    },
+    {
         "page": "RSVP",
         "location": "#/rsvp"
     },
     {
         "page": "Photos",
         "location": "#/photos"
-    },
-    {
-        "page": "The Facts",
-        "location": "#/details"
     }
 ];
 const title = "#WorthTheHassell";

@@ -3,7 +3,10 @@ import RSVPForm from '../components/RSVPform';
 
 function Rsvp() {
   return (
-    <RSVPForm />
+    <>
+      <h4 style={{color: "red"}}>Please respond by September 12th</h4>
+      <RSVPForm />
+    </>
   );
 }
 
