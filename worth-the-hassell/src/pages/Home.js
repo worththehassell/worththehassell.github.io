@@ -21,7 +21,7 @@ function Home() {
       <Typography>
       Our Origin Story
 On that fateful night June 19, 2010, our friends Lindsey and Kate laid the groundwork for our
-great love story. They were bored and decided to try out a new game called Icing. They texted
+great love story. They were bored and decided to try a new game called Icing. They texted
 everyone in their phone contacts and if they responded drove to their location and proceeded to
 Ice them.
 </Typography>
@@ -33,8 +33,8 @@ Ice them.
   <Typography>
 Nick was first and got got at Kate’s Pub. He decided to join in the fun and jumped in the
 backseat of the Saab and they eventually got Suzanne at The Redwood (RIP). Suzanne was
-with friends and she told them to come into the bar. “We can't, we've been banned, you must
-come outside.” And actually, if you know them, a quite plausible story. So she went outside.
+with friends and she told Lindsey and Kate to come into the bar. “We can't, we've been banned, you must
+come outside.” And actually, if you know them, it was a plausible story. So she went outside.
 </Typography>
 <img 
   srcSet={nSrcSet}
@@ -50,7 +50,7 @@ come outside.” And actually, if you know them, a quite plausible story. So she
 They got a text from their next victim and invited Suzanne along. She hesitated, thinking of her
 friend Claire inside the bar. But when she saw Nick it was decided. She fell under his spell. She
 sent Claire an apologetic text (sorry, Claire!), ditched her, and Nick and Suzanne ended up in
-the backseat getting to know each other all night…</Typography>
+the backseat getting to know each other all night long…the beginning of forever!</Typography>
     </div>
   );
 }
