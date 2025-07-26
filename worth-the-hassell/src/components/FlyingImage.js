@@ -4,10 +4,10 @@ import * as React from 'react';
 
 
 function FlyingImage(props) {
-    const { src, height=50, width=50, alt="flying-image" } = props;
+    const { src, height=50, width=50, alt="flying-image", num } = props;
 
   return (
-    <div className="flier">
+    <div className={"flier"+num}>
         <img src={src} height={height} width={width} alt={alt} />
     </div>
   );

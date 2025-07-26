@@ -17,12 +17,11 @@ const nSrcSet = `${nSmall} 213w, ${nMedium} 427w`
 function Home() {
   return (
     <div>
-      <h1><strike>Black</strike> A Friday White Wedding</h1>
+      <h6>Our Origin Story</h6>
       <Typography>
-      Our Origin Story
 On that fateful night June 19, 2010, our friends Lindsey and Kate laid the groundwork for our
 great love story. They were bored and decided to try a new game called Icing. They texted
-everyone in their phone contacts and if they responded drove to their location and proceeded to
+everyone in their phone contacts and if they responded, drove to their location and proceeded to
 Ice them.
 </Typography>
 <img 

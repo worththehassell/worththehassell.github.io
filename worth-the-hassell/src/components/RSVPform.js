@@ -75,14 +75,34 @@ export default function RSVPForm() {
 
     const [checkState, setCheckState] = React.useState({
         dinner: false,
-        karaoke: false
+        karaoke: false,
+        rude: false
     });
     
     const handleChange = (event) => {
-        setCheckState({
-        ...checkState,
-        [event.target.name]: event.target.checked,
-        });
+        if (event.target.name === "rude" &&
+        event.target.checked === true)
+        {
+            setCheckState({
+                dinner: false,
+                karaoke: false, 
+                rude: true
+            })
+        } else if (event.target.name !== "rude" &&
+        event.target.checked === true)
+        {
+            setCheckState({
+                ...checkState,
+                rude: false,
+                [event.target.name]: event.target.checked,
+                });
+        } else 
+        {
+            setCheckState({
+                ...checkState,
+                [event.target.name]: event.target.checked,
+                });
+        }
     };
 
     const handleSongChange = (event) => {
@@ -90,7 +110,7 @@ export default function RSVPForm() {
         setSongChoice(updatedSong);
       };
 
-    const { dinner, karaoke } = checkState;
+    const { dinner, karaoke, rude } = checkState;
 
     const handleSubmit = async (e) => {
         setSubmitted(true);
@@ -101,6 +121,7 @@ export default function RSVPForm() {
                 "guest": guest.value,
                 "dinner": dinner,
                 "karaoke": karaoke,
+                "rude": rude,
                 "songChoice": songChoice,
             }
 
@@ -148,6 +169,7 @@ export default function RSVPForm() {
             <FormGroup>
                 <FormControlLabel control={<Checkbox checked={dinner} onChange={handleChange} />} label="Dinner" name="dinner" />
                 <FormControlLabel control={<Checkbox checked={karaoke} onChange={handleChange} />} label="Karaoke" name="karaoke" />
+                <FormControlLabel control={<Checkbox checked={rude} onChange={handleChange} />} label="Not coming :(" name="rude" />
             </FormGroup>
             <TextField
                 label={`Favorite Karaoke Songs (comma separated)`}
