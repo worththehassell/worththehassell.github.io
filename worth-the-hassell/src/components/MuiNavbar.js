@@ -13,6 +13,7 @@ import Toolbar from '@mui/material/Toolbar';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Sparkles from './SparkleWrapper';
 
 const drawerWidth = 240;
 const navItems = [
@@ -45,16 +46,17 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        {title}
+        <Sparkles>{title}</Sparkles>
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.page} disablePadding>
             <ListItemButton href={item.location} sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item.page} />
+            <Sparkles><ListItemText primary={item.page} /></Sparkles>
             </ListItemButton>
           </ListItem>
+          
         ))}
       </List>
     </Box>
@@ -79,13 +81,14 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            {title}
+            <Sparkles>{title}</Sparkles>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button href={item.location} key={item.page} sx={{ color: '#fff' }}>
+              <Sparkles><Button href={item.location} key={item.page} sx={{ color: '#fff' }}>
                 {item.page}
               </Button>
+              </Sparkles>
             ))}
           </Box>
         </Toolbar>

@@ -4,10 +4,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import useWindowSize from '../hooks/useWindowSize';
-import microphone from '../static/microphone.png';
-import chicken from '../static/chicken.png';
-import dove from '../static/dove.png';
-import disco from '../static/disco.png';
+import microphone from '../static/microphoneSmall.png';
+import chicken from '../static/chickenSmall.png';
+import dove from '../static/doveSmall.png';
+import disco from '../static/discoSmall.png';
 import FlyingImage from '../components/FlyingImage';
 
 function CustomTabPanel(props) {
@@ -59,7 +59,7 @@ export function DetailsTabs() {
       <Box sx={{ 
             borderBottom: isSmallScreen ? 1 : 0, 
             borderColor: 'divider'}}>
-        <Tabs sx={{width: 120}} 
+        <Tabs sx={{minWidth: 120}} 
             className="tab-bar" 
             orientation={isSmallScreen ? 'horizontal' : 'vertical'} 
             value={value} 
