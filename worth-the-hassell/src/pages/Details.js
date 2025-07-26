@@ -66,6 +66,7 @@ export function DetailsTabs() {
             value={value} 
             variant="scrollable"
             scrollButtons="auto"
+            allowScrollButtonsMobile
             onChange={handleChange} 
             aria-label="basic tabs example"
         >
