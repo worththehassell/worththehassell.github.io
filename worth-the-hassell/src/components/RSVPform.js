@@ -125,7 +125,7 @@ export default function RSVPForm() {
                 "songChoice": songChoice,
             }
 
-            let url = "https://script.google.com/macros/s/AKfycbx2RwjXbyAIS99Mu_-tqDVK8ql2fpx-N0t1DHkcNKGtKNqC6TPYsnh_dpnDzDzBxBTj/exec";
+            let url = "https://script.google.com/macros/s/AKfycbyeu1Hx-sXllP6PUkD5pMBb_t-vkbBLz21zejZah40AmOLjm_tRWinqHkaJmIaJivce/exec";
 
             try {
                 const response = await fetch(url, {
