@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.bebe726b.css",
-    "main.js": "/static/js/main.d712028f.js",
+    "main.css": "/static/css/main.7b650498.css",
+    "main.js": "/static/js/main.a6863756.js",
     "static/js/453.063cb33c.chunk.js": "/static/js/453.063cb33c.chunk.js",
     "static/media/phone.jpg": "/static/media/phone.e5e70bfd3e0b00af7fd8.jpg",
     "static/media/n.jpg": "/static/media/n.32a101077bc39fd045b9.jpg",
     "static/media/s.jpg": "/static/media/s.863f9aa977186239bc80.jpg",
+    "static/media/catSmall.png": "/static/media/catSmall.477a09222190f08299ce.png",
     "static/media/doveSmall.png": "/static/media/doveSmall.25be7353007aec8b36a9.png",
     "static/media/microphoneSmall.png": "/static/media/microphoneSmall.532323622a2d99e6a4df.png",
     "static/media/nMedium.jpeg": "/static/media/nMedium.84241e51a57cb0bc4cac.jpeg",
@@ -65,12 +66,12 @@
     "static/media/DSC00239.JPG": "/static/media/DSC00239.e5038f2f9abe1ae2c70c.JPG",
     "static/media/DSC01218.JPG": "/static/media/DSC01218.8f10553406c1b9698a30.JPG",
     "index.html": "/index.html",
-    "main.bebe726b.css.map": "/static/css/main.bebe726b.css.map",
-    "main.d712028f.js.map": "/static/js/main.d712028f.js.map",
+    "main.7b650498.css.map": "/static/css/main.7b650498.css.map",
+    "main.a6863756.js.map": "/static/js/main.a6863756.js.map",
     "453.063cb33c.chunk.js.map": "/static/js/453.063cb33c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bebe726b.css",
-    "static/js/main.d712028f.js"
+    "static/css/main.7b650498.css",
+    "static/js/main.a6863756.js"
   ]
 }
