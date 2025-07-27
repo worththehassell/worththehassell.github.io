@@ -82,7 +82,7 @@ function DrawerAppBar(props) {
                 <List disablePadding>
                     {item.nested.map((nested) => (
                         <ListItem key={nested.tab} disablePadding>
-                            <ListItemButton href={`${item.location}/${nested.value}`} >
+                            <ListItemButton href={`${item.location}?tab=${nested.value}`} >
                             <Sparkles><ListItemText primary={nested.tab} /></Sparkles>
                             </ListItemButton>
                         </ListItem>

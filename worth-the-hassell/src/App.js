@@ -9,6 +9,7 @@ import './css/flier.css';
 import Photos from './pages/Photos';
 
 function App() {
+
   return (
     <>
     <DrawerAppBar />
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/rsvp" element={<Rsvp />} />
-          <Route path="/details/:val?" element={<DetailsTabs />} />
+          <Route path="/details" element={<DetailsTabs />} />
           <Route path="/photos" element={<Photos />} />
         </Routes>
       </Router>

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -10,7 +11,8 @@ import dove from '../static/doveSmall.png';
 import disco from '../static/discoSmall.png';
 import cat from '../static/catSmall.png';
 import FlyingImage from '../components/FlyingImage';
-import { useParams } from 'react-router';
+import { useLocation } from 'react-router';
+
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,9 +44,17 @@ function a11yProps(index) {
 }
 
 export function DetailsTabs() {
-  const params = useParams()
-  const val = Number(params.val ?? 0);
-  const [value, setValue] = React.useState(val ?? 0);
+    const location = useLocation();
+
+  const [value, setValue] = React.useState(0);
+
+  useEffect(() => {
+    // This will run whenever location.search or location.hash changes
+    const queryParams = new URLSearchParams(location.search);
+    const tab = queryParams.get('tab');
+    setValue(Number(tab))
+    // Perform actions based on the new 'id'
+  }, [location.search]); // Dependencies
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
