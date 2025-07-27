@@ -47,7 +47,7 @@ come outside.” And actually, if you know them, it was a plausible story. So sh
   alt="Suzanne drinking a Smirnoff Ice." />
 <Typography>
 They got a text from their next victim and invited Suzanne along. She hesitated, thinking of her
-friend Claire inside the bar. But when she saw Nick it was decided. She fell under his spell. She
+friend Claire inside the bar. But when she saw Nick, it was decided. She fell under his spell. She
 sent Claire an apologetic text (sorry, Claire!), ditched her, and Nick and Suzanne ended up in
 the backseat getting to know each other all night long…the beginning of forever!</Typography>
     </div>
