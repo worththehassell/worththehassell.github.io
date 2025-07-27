@@ -23,7 +23,29 @@ const navItems = [
     },
     {
         "page": "The Facts",
-        "location": "#/details"
+        "location": "#/details",
+        "nested": [
+            {
+                "tab": "Legally Married",
+                "value": "0"
+            },
+            {
+                "tab": "Dinner",
+                "value": "1"
+            },
+            {
+                "tab": "Karaoke",
+                "value": "2"
+            },
+            {
+                "tab": "Dress Code",
+                "value": "3"
+            },
+            {
+                "tab": "Registry",
+                "value": "4"
+            },
+        ]
     },
     {
         "page": "RSVP",
@@ -34,6 +56,7 @@ const navItems = [
         "location": "#/photos"
     }
 ];
+
 const title = "#WorthTheHassell";
 
 function DrawerAppBar(props) {
@@ -51,10 +74,21 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item.page} disablePadding>
+          <ListItem alignItems={(item.nested?.length > 0) ? 'flex-start' : 'center'} key={item.page} disablePadding>
             <ListItemButton href={item.location} sx={{ textAlign: 'center' }}>
             <Sparkles><ListItemText primary={item.page} /></Sparkles>
             </ListItemButton>
+            {item.nested?.length > 0 && (
+                <List disablePadding>
+                    {item.nested.map((nested) => (
+                        <ListItem key={nested.tab} disablePadding>
+                            <ListItemButton href={`${item.location}/${nested.value}`} >
+                            <Sparkles><ListItemText primary={nested.tab} /></Sparkles>
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
+            )}
           </ListItem>
           
         ))}
@@ -85,9 +119,10 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Sparkles><Button href={item.location} key={item.page} sx={{ color: '#fff' }}>
-                {item.page}
-              </Button>
+              <Sparkles key={item.page}>
+                <Button href={item.location} key={item.page} sx={{ color: '#fff' }}>
+                    {item.page}
+                </Button>
               </Sparkles>
             ))}
           </Box>

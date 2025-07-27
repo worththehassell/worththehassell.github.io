@@ -10,6 +10,7 @@ import dove from '../static/doveSmall.png';
 import disco from '../static/discoSmall.png';
 import cat from '../static/catSmall.png';
 import FlyingImage from '../components/FlyingImage';
+import { useParams } from 'react-router';
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -41,7 +42,9 @@ function a11yProps(index) {
 }
 
 export function DetailsTabs() {
-  const [value, setValue] = React.useState(0);
+  const params = useParams()
+  const val = Number(params.val ?? 0);
+  const [value, setValue] = React.useState(val ?? 0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
