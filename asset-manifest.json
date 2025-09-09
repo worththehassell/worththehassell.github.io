@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7b650498.css",
-    "main.js": "/static/js/main.49bda463.js",
+    "main.js": "/static/js/main.cf3344b4.js",
     "static/js/453.063cb33c.chunk.js": "/static/js/453.063cb33c.chunk.js",
     "static/media/phone.jpg": "/static/media/phone.e5e70bfd3e0b00af7fd8.jpg",
     "static/media/n.jpg": "/static/media/n.32a101077bc39fd045b9.jpg",
@@ -54,6 +54,7 @@
     "static/media/DSC01089.JPG": "/static/media/DSC01089.d2b3f9a92cc62f05310f.JPG",
     "static/media/IMG_20150512_145303.jpeg": "/static/media/IMG_20150512_145303.54c1678a4c187e43edcc.jpeg",
     "static/media/phoneSmall.jpeg": "/static/media/phoneSmall.34d110cf6f1efaf8fc24.jpeg",
+    "static/media/PXL_20250906_222327522.jpg": "/static/media/PXL_20250906_222327522.ff13da5a7e6329e50596.jpg",
     "static/media/PXL_20240713_094759776.jpg": "/static/media/PXL_20240713_094759776.2e257f309f703286727a.jpg",
     "static/media/PXL_20250425_024043419.jpg": "/static/media/PXL_20250425_024043419.6d120e582834144d8326.jpg",
     "static/media/IMG_20250723_222012.jpg": "/static/media/IMG_20250723_222012.2b7cd633df60b21b943d.jpg",
@@ -67,11 +68,11 @@
     "static/media/DSC01218.JPG": "/static/media/DSC01218.8f10553406c1b9698a30.JPG",
     "index.html": "/index.html",
     "main.7b650498.css.map": "/static/css/main.7b650498.css.map",
-    "main.49bda463.js.map": "/static/js/main.49bda463.js.map",
+    "main.cf3344b4.js.map": "/static/js/main.cf3344b4.js.map",
     "453.063cb33c.chunk.js.map": "/static/js/453.063cb33c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7b650498.css",
-    "static/js/main.49bda463.js"
+    "static/js/main.cf3344b4.js"
   ]
 }
