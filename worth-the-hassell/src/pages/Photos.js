@@ -1,4 +1,5 @@
 import React from 'react';
+import picture_49 from '../static/friends/PXL_20250906_222327522.jpg';
 import picture_0 from '../static/friends/PXL_20240711_111518405.jpg';
 import picture_1 from '../static/friends/IMG_20160531_125207.jpg';
 import picture_2 from '../static/friends/PXL_20250424_045039571.jpg';
@@ -54,6 +55,7 @@ import picture_48 from '../static/friends/PXL_20250331_005711043.MP.jpg';
 function Photos() {
     return (
     <div display="flex">
+        <img src={picture_49} alt="Suzanne and/or Nick with maybe someone else)" />
         <img src={picture_0} alt="Suzanne and/or Nick with maybe someone else)" />
         <img src={picture_1} alt="Suzanne and/or Nick with maybe someone else)" />
         <img src={picture_2} alt="Suzanne and/or Nick with maybe someone else)" />
